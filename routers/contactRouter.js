@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 // récupérer une catégorie pour l'id
 router.get('/:id', (req, res) => {
     const id= req.params.id;
-    sequelize.models.Product.findByPk(id)
+    sequelize.models.User.findByPk(id)
     .then(myProduct => {
         res.send(myProduct);
     })
