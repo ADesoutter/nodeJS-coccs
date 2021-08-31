@@ -1,4 +1,3 @@
-// DataTypes est à importer dans chaque fichier de modèle
 const {DataTypes} = require('sequelize');
 
 module.exports = (sequelize) => sequelize.define('Category', {
@@ -8,7 +7,7 @@ module.exports = (sequelize) => sequelize.define('Category', {
     },
     function: {
         type: DataTypes.TEXT,
-        allowNull: true
+        allowNull: false
     }
  }, {
      tableName: 'category',

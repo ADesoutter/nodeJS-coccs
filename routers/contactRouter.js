@@ -4,18 +4,18 @@ const sequelize = require("../models");
 
 // récupérer tous les catégories
 router.get('/', (req, res) => {
-    sequelize.models.Product.findAll()
-    .then(myProducts => {
-        res.send(myProducts);
+    sequelize.models.Contact.findAll()
+    .then(myContacts => {
+        res.send(myContacts);
     })
 })
    
 // récupérer une catégorie pour l'id
 router.get('/:id', (req, res) => {
     const id= req.params.id;
-    sequelize.models.User.findByPk(id)
-    .then(myProduct => {
-        res.send(myProduct);
+    sequelize.models.Contact.findByPk(id)
+    .then(myContact => {
+        res.send(myContact);
     })
 })
 

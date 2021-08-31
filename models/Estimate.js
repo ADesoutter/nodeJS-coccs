@@ -1,6 +1,6 @@
 const {DataTypes} = require('sequelize');
 
-module.exports = (sequelize) => sequelize.define('Devis', {
+module.exports = (sequelize) => sequelize.define('Estimate', {
     lastname: {
         type: DataTypes.STRING(60),
         allowNull: false
@@ -26,7 +26,7 @@ module.exports = (sequelize) => sequelize.define('Devis', {
         allowNull: false
     },
  }, {
-     tableName: 'devis',
+     tableName: 'estimate',
      underscored: true,
      timestamp: false
  })
