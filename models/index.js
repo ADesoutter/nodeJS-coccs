@@ -16,14 +16,11 @@ const Category = require('./Category')(sequelize);
 
 //-------------- Relations start---------------//
 
-Category.hasMany(Quizz);
-Quizz.belongsTo(Category);
+Category.hasMany(Product);
+Product.belongsTo(Category);
 
-Quizz.hasMany(Question);
-Question.belongsTo(Quizz);
-
-Question.hasMany(Answer);
-Answer.belongsTo(Question);
+User.belongsToMany(Product, {through: "user_product"});
+Product.belongsToMany(User, {through: "user_product"});
 
 //-------------- Relations end---------------//
 
