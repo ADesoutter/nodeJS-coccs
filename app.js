@@ -14,6 +14,14 @@ app.use('/product', productRouter);
 const categoryRouter = require('./routers/categoryRouter');
 app.use('/category', categoryRouter);
 
+const estimateRouter = require('./routers/estimateRouter');
+app.use('/estimate', estimateRouter);
+
+const contactRouter = require('./routers/contactRouter');
+app.use('/contact', contactRouter);
+
+const faqRouter = require('./routers/faqRouter');
+app.use('/faq', faqRouter);
 
 // Je veux accepter du JSON en envoi d'informations
 app.use(express.json());
