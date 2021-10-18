@@ -19,5 +19,13 @@ router.get('/:id', (req, res) => {
     })
 })
 
+//créer des catégories en API
+router.post('/', (req, res) => {
+    console.log(req.body);
+    sequelize.models.Category.create(req.body)
+    .then(categoryCreated => {
+        res.send(categoryCreated);
+    })
+})
 
 module.exports = router;
