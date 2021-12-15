@@ -20,5 +20,5 @@ module.exports = (sequelize) => sequelize.define('Product', {
  }, {
      tableName: 'product',
      underscored: true,
-     timestamp: false
+     timestamps : false
  })

@@ -11,5 +11,6 @@ module.exports = (sequelize) => sequelize.define('Category', {
     }
  }, {
      tableName: 'category',
-     underscored: true
+     underscored: true,
+     timestamps : false
  })

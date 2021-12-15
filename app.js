@@ -1,9 +1,9 @@
 const express = require('express');
 // const axios = require('axios');
-const cors = require('cors');
+// const cors = require('cors');
 
 const app = express();
-app.use(cors());
+// app.use(cors());
 const sequelize = require('./models');
 const PORT = process.env.PORT || 5000;
 

@@ -28,5 +28,5 @@ module.exports = (sequelize) => sequelize.define('Estimate', {
  }, {
      tableName: 'estimate',
      underscored: true,
-     timestamp: false
+     timestamps : false
  })
