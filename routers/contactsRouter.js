@@ -19,4 +19,13 @@ router.get('/:id', (req, res) => {
     })
 })
 
+// //créer des formulaires de contact en API
+router.post('http://localhost:3000/api/form', (req, res) => {
+    console.log(req.body);
+    sequelize.models.Contact.create(req.body)
+    .then(contactCreated => {
+        res.send(contactCreated);
+    })
+})
+
 module.exports = router;

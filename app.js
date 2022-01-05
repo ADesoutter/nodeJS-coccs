@@ -1,9 +1,9 @@
 const express = require('express');
 // const axios = require('axios');
-// const cors = require('cors');
+const cors = require('cors');
 
 const app = express();
-// app.use(cors());
+app.use(cors());
 const sequelize = require('./models');
 const PORT = process.env.PORT || 5000;
 
@@ -35,7 +35,6 @@ sequelize.authenticate()
 .then(() => {
     // console.log("Database connection OK!");
     // // Synchronise la base de données avec nos modèles
-    // // Travailler sur la construction des bases de données
     // sequelize.sync({force:true})
 
     app.listen(PORT, () => {
