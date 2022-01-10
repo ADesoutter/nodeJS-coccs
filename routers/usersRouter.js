@@ -20,3 +20,22 @@ router.get('/:id', (req, res) => {
 })
 
 module.exports = router;
+
+// // Configurer notre serveur pour utiliser ces routeurs
+// const usersRouter = require('./routers/usersRouter');
+// app.use('/users', usersRouter);
+
+// const productsRouter = require('./routers/productsRouter');
+// app.use('/products', productsRouter);
+
+// const categoriesRouter = require('./routers/categoriesRouter');
+// app.use('/categories', categoriesRouter);
+
+// const estimatesRouter = require('./routers/estimatesRouter');
+// app.use('/estimates', estimatesRouter);
+
+// const contactsRouter = require('./routers/contactsRouter');
+// app.use('/contacts', contactsRouter);
+
+// const faqsRouter = require('./routers/faqsRouter');
+// app.use('/faqs', faqsRouter);

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node app.js"
   },
-  "author": "",
+  "author": "adesoutter",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.4",
