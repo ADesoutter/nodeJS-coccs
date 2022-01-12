@@ -23,27 +23,3 @@ module.exports = {
     dialect: "mariadb"
   }
 }
-
-
-
-// "development": {
-//   "username": "coccs_admin",
-//   "password": "fabroot1234",
-//   "database": "coccs_arthro",
-//   "host": "localhost",
-//   "dialect": "mariadb"
-// },
-// "test": {
-//   "username": "coccs_admin",
-//   "password": "fabroot1234",
-//   "database": "coccs_arthro",
-//   "host": "localhost",
-//   "dialect": "mariadb"
-// },
-// "production": {
-//   "username": "coccs_admin",
-//   "password": "fabroot1234",
-//   "database": "coccs_arthro",
-//   "host": "localhost",
-//   "dialect": "mariadb"
-// }
