@@ -24,14 +24,14 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false
       },
-      // category_id: {
-      //   allowNull: false,
-      //   foreignKey: true,
-      //   type: Sequelize.INTEGER,
-      //   model: {
-      //           tableName: 'category',
-      //         },
-      // },
+      category_id: {
+        allowNull: false,
+        foreignKey: true,
+        type: Sequelize.INTEGER,
+        model: {
+                tableName: 'category',
+              },
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
