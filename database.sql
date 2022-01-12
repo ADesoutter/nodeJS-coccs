@@ -1,3 +1,9 @@
+CREATE USER 'coccs_admin'@'localhost' 
+IDENTIFIED VIA mysql_native_password USING '***';
+GRANT ALL PRIVILEGES ON *.* TO 'coccs_admin'@'localhost' 
+REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+GRANT ALL PRIVILEGES ON `coccs_arthro`.* TO 'coccs_admin'@'localhost'; 
+
 CREATE TABLE `coccs_arthro`.`user`
 ( `id` INT UNSIGNED NOT NULL AUTO_INCREMENT , 
 `lastname` INT(60) NOT NULL , 
@@ -8,16 +14,6 @@ CREATE TABLE `coccs_arthro`.`user`
 `email` VARCHAR(180) NOT NULL , 
 PRIMARY KEY (`id`)) 
 ENGINE = InnoDB;
-
-
-CREATE USER 'coccs_user'@'%' 
-IDENTIFIED VIA mysql_native_password USING '***';
-GRANT USAGE ON *.* TO 'coccs_user'@'%' 
-REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 
-0 MAX_CONNECTIONS_PER_HOUR 
-0 MAX_UPDATES_PER_HOUR 
-0 MAX_USER_CONNECTIONS 0;
-GRANT ALL PRIVILEGES ON `coccs_arthro`.* TO 'coccs_user'@'%'; 
 
 CREATE TABLE `coccs_arthro`.`Product` 
 ( `id` INT UNSIGNED NOT NULL AUTO_INCREMENT , 

@@ -1,19 +1,19 @@
 const express = require('express');
 const app = express();
 const sequelize = require('./models');
-// const products = require('./data/products');
+const products = require('./data/products'); 
 const PORT = process.env.PORT || 3080;
 
-// app.get('/api/products', (req, res) => {
-//     res.json(products)
-// });
+app.get('/api/products', (req, res) => {
+    res.json(products)
+});
 
 // Configurer notre serveur pour utiliser ces routeurs
-const usersRouter = require('./routes/usersRouter');
-app.use('/users', usersRouter);
+// const usersRouter = require('./routes/usersRouter');
+// app.use('/users', usersRouter);
 
-// const productsRouter = require('./routes/productsRouter');
-// app.use('/products', productsRouter);
+const productsRouter = require('./routes/productsRouter');
+app.use('/products', productsRouter);
 
 // const categoriesRouter = require('./routes/categoriesRouter');
 // app.use('/categories', categoriesRouter);

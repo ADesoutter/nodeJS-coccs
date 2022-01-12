@@ -24,21 +24,23 @@ const sequelize = require("../models");
 
 // router.delete('/:id', deleteProduct)
 
-// // récupérer tous les catégories
-// router.get('/', (req, res) => {
-//     sequelize.models.Product.findAll()
-//     .then(myProducts => {
-//         res.send(myProducts);
-//     })
-// })
+// récupérer tous les catégories
+router.get('/', (req, res) => {
+    sequelize.models.Product.findAll()
+    .then(myProducts => {
+        res.send(myProducts);
+    })
+})
    
-// // récupérer une catégorie pour l'id
-// router.get('/:id', (req, res) => {
-//     const id= req.params.id;
-//     sequelize.models.Product.findByPk(id)
-//     .then(myProduct => {
-//         res.send(myProduct);
-//     })
-// })
+// récupérer une catégorie pour l'id
+router.get('/products', (req, res) => {
+    const id= req.params.id;
+    sequelize.models.Product.findByPk(id)
+    .then(myProduct => {
+        res.send(myProduct);
+    })
+})
+
+
 
 module.exports = router;
