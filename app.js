@@ -1,26 +1,31 @@
 const express = require('express');
 const app = express();
 const sequelize = require('./models');
+// const products = require('./data/products');
 const PORT = process.env.PORT || 3080;
 
+// app.get('/api/products', (req, res) => {
+//     res.json(products)
+// });
+
 // Configurer notre serveur pour utiliser ces routeurs
-const usersRouter = require('./routers/usersRouter');
+const usersRouter = require('./routes/usersRouter');
 app.use('/users', usersRouter);
 
-const productsRouter = require('./routers/productsRouter');
-app.use('/products', productsRouter);
+// const productsRouter = require('./routes/productsRouter');
+// app.use('/products', productsRouter);
 
-const categoriesRouter = require('./routers/categoriesRouter');
-app.use('/categories', categoriesRouter);
+// const categoriesRouter = require('./routes/categoriesRouter');
+// app.use('/categories', categoriesRouter);
 
-const estimatesRouter = require('./routers/estimatesRouter');
-app.use('/estimates', estimatesRouter);
+// const estimatesRouter = require('./routes/estimatesRouter');
+// app.use('/estimates', estimatesRouter);
 
-const contactsRouter = require('./routers/contactsRouter');
-app.use('/contacts', contactsRouter);
+// const contactsRouter = require('./routes/contactsRouter');
+// app.use('/contacts', contactsRouter);
 
-const faqsRouter = require('./routers/faqsRouter');
-app.use('/faqs', faqsRouter);
+// const faqsRouter = require('./routes/faqsRouter');
+// app.use('/faqs', faqsRouter);
 
 // Je veux accepter du JSON en envoi d'informations
 app.use(express.json());

@@ -9,20 +9,20 @@ module.exports = (sequelize) => sequelize.define('User', {
         type: DataTypes.STRING(60),
         allowNull: false
     },
-    hospital: {
-        type: DataTypes.STRING(90),
+    email: {
+        type: DataTypes.STRING(180),
         allowNull: false
     },
     phone: {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    function: {
-        type: DataTypes.STRING(100),
+    hospital: {
+        type: DataTypes.STRING(90),
         allowNull: false
     },
-    email: {
-        type: DataTypes.STRING(180),
+    function: {
+        type: DataTypes.STRING(100),
         allowNull: false
     },
  }, {

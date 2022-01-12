@@ -26,5 +26,8 @@
     "url": "https://github.com/ADesoutter/nodeJS-coccs/issues"
   },
   "homepage": "https://github.com/ADesoutter/nodeJS-coccs#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "sequelize-cli": "^6.3.0"
+  }
 }
