@@ -25,14 +25,12 @@ module.exports = {
         allowNull: false
       },
       // category_id: {
+      //   allowNull: false,
+      //   foreignKey: true,
       //   type: Sequelize.INTEGER,
-      //   references: {
-      //     model: {
-      //       tableName: 'category',
-      //     },
-      //     key: 'id'
-      //   },
-      //   allowNull: false
+      //   model: {
+      //           tableName: 'category',
+      //         },
       // },
     });
   },
