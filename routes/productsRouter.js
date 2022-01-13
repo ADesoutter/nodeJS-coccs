@@ -1,45 +1,64 @@
 const express = require('express');
 const router = express.Router();
 const sequelize = require("../models");
+const dataProducts = require('../data/dataproduct'); 
 
-// const {
-//     getProducts,
-//     getProduct,
-//     createProduct,
-//     updateProduct,
-//     deleteProduct,
-// } = require('../controllers/products')
+// router.post('/products', (req, res) => {
+//     sequelize.models.Product
+//     res.send(dataProducts)
+// });
 
-// router.get('/api/products', (req, res) => {
-//     res.json(products)
+// router.post('/', (req, res) => {
+//     sequelize.models.Product.create(req.body)
+//     .then(productCreated => {
+//         res.send(productCreated);
+//     })
 // })
 
-// router.get('/', getProducts)
+// router.get('/', (req, res) => {
+//     sequelize.models.Product.findAll()
+//     .then(myProducts => {
+//         res.send(myProducts);
+//     })
+// })
 
-// router.get('/:id', getProduct)
+const  { 
+    getProducts,
+    getProduct,
+    createProduct,
+    updateProduct,
+    deleteProduct 
+} = require('../controllers/productsController')
 
-// router.post('/', createProduct)
+router.get('/', getProducts)
 
-// router.put('/:id', updateProduct)
+router.get('/:productID', getProduct)
 
-// router.delete('/:id', deleteProduct)
+router.post('/', createProduct) 
 
-// récupérer tous les catégories
-router.get('/', (req, res) => {
-    sequelize.models.Product.findAll()
-    .then(myProducts => {
-        res.send(myProducts);
-    })
-})
+router.put('/:productID', updateProduct) 
+
+router.delete('/:productID', deleteProduct)
+
+module.exports = router
+
+
+// // récupérer tous les catégories
+// router.get('/', (req, res) => {
+//     sequelize.models.Product.findAll()
+//     .then(myProducts => {
+//         res.send(myProducts);
+//     })
+// })
    
-// récupérer une catégorie pour l'id
-router.get('/products', (req, res) => {
-    const id= req.params.id;
-    sequelize.models.Product.findByPk(id)
-    .then(myProduct => {
-        res.send(myProduct);
-    })
-})
+// // récupérer une catégorie pour l'id
+// router.get('/products', (req, res) => {
+//     const id= req.params.id;
+//     sequelize.models.Product.findByPk(id)
+//     .then(myProduct => {
+//         res.send(myProduct);
+//     })
+// })
 
 
 
