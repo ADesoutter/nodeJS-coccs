@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const sequelize = require('./models');
 const products = require('./data/dataproduct')
-// const bodyParser = require('body-parser') utilisation de app.use(express.json());
+const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const csrf = require("csurf")
 const PORT = process.env.PORT || 4000;
@@ -41,10 +41,6 @@ app.use('/api/products', productsRouter);
 // app.use('/faqs', faqsRouter);
 
 app.use(express.json());
-
-app.get('/api/products', (req,res) => {
-    res.json(products)
-})
 
 console.log('Checking Database connection...');
 

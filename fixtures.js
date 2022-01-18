@@ -1,5 +1,6 @@
 const sequelize = require("./models");
 const faker = require('faker');
+const dataproducts = require('./data/')
 
 console.log('Checking Database connection...');
 
